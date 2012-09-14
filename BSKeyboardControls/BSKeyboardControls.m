@@ -118,7 +118,7 @@ enum {
 /* Next */
 - (void)next
 {
-    int index = [self.textFields indexOfObject:self.activeTextField];
+    NSUInteger index = [self.textFields indexOfObject:self.activeTextField];
 
     if (index < self.textFields.count - 1)
     {
@@ -146,7 +146,7 @@ enum {
 /* Enable and disable buttons */
 - (void)enableDisableButtonsForActiveTextField:(id)textField
 {
-    int index = [self.textFields indexOfObject:textField];
+    NSUInteger index = [self.textFields indexOfObject:textField];
     
     // Check if "Previous" button should be enabled
     if (index > 0)
